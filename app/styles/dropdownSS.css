@@ -1,0 +1,95 @@
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 300px; /* Set a fixed width */
+  }
+  
+  .dropdown-header {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    border-radius: 8px;
+    background: var(--material-theme-sys-light-background, #FDFBFF);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    /* padding-left: 10px;
+    padding-right: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px; */
+    color: var(--Instaskool-Blue, #0551A7);
+  }
+  
+  .dropdown-header.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .dropdown-options {
+    /* position: absolute; */
+    top: calc(100% + 5px); /* Adjust the distance from the header */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    /* border-top: none; */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards; /* Adjusted timing function */
+    /* background-color: red; */
+    border-top: 1px solid black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    /* border-radius: 8px; */
+    background: var(--material-theme-sys-light-background, #FDFBFF);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    color: var(--Instaskool-Blue, #0551A7);
+  }
+  
+  .dropdown-option {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom:6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out; /* Added transition property */
+  }
+  
+  .dropdown-header.open .dropdown-icon {
+    transform: rotate(180deg);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
